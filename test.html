@@ -3,42 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag to Fill Screen</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .draggable {
-            cursor: ew-resize;
-        }
-    </style>
+    <title>Document</title>
 </head>
-<body class="w-screen h-screen overflow-hidden">
-    <div id="container" class="relative w-full h-full bg-white">
-        <div id="bar" class="absolute left-0 top-0 h-full w-10 bg-black draggable"></div>
-    </div>
-    <script>
-        const bar = document.getElementById("bar");
-        const container = document.getElementById("container");
-
-        let isDragging = false;
-
-        bar.addEventListener("mousedown", (e) => {
-            isDragging = true;
-            document.body.style.userSelect = "none";
-        });
-
-        document.addEventListener("mousemove", (e) => {
-            if (isDragging) {
-                let newWidth = e.clientX;
-                if (newWidth < 0) newWidth = 0;
-                if (newWidth > window.innerWidth) newWidth = window.innerWidth;
-                bar.style.width = `${newWidth}px`;
-            }
-        });
-
-        document.addEventListener("mouseup", () => {
-            isDragging = false;
-            document.body.style.userSelect = "auto";
-        });
-    </script>
+<body>
+    <style>
+    @import "tailwindcss";
+        @theme {
+          --color-midnight: #ffffff
+          ;
+          --color-tahiti: #3ab7bf;
+          --color-bermuda: #78dcca;
+        }
+        </style>
+    <header class="bg-gray-900 p-4 flex items-center justify-between">
+        <h1 class="text-white text-2xl font-bold">My Spotify Clone</h1>
+        
+        <!-- SVG with hover effect -->
+        <svg
+          class="w-8 h-8 text-white hover:text-green-500 transition-colors duration-200"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm4.93 14.36a1 1 0 0 1-1.37.32 12.27 12.27 0 0 0-7.74-1.35 1 1 0 0 1-.36-2 14.3 14.3 0 0 1 9 1.55 1 1 0 0 1 .32 1.37Zm1.37-3a1 1 0 0 1-1.38.32 15.42 15.42 0 0 0-9.5-1.62 1 1 0 0 1-.29-2 17.42 17.42 0 0 1 10.79 1.84 1 1 0 0 1 .38 1.41Zm.18-3.05a1 1 0 0 1-1.36.37 18.6 18.6 0 0 0-11.62-2 1 1 0 0 1-.27-2 20.63 20.63 0 0 1 12.86 2.23 1 1 0 0 1 .39 1.4Z"/>
+        </svg>
+      </header>
+      <p class="text-custom-gray">hoi</p>
 </body>
 </html>
+
+@import "tailwindcss";
+@theme {
+  --color-midnight: #121063;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+}
