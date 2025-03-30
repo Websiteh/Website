@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag to Fill Screen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .draggable {
+            cursor: ew-resize;
+        }
+    </style>
+</head>
+<body class="w-screen h-screen overflow-hidden">
+    <div id="container" class="relative w-full h-full bg-white">
+        <div id="bar" class="absolute left-0 top-0 h-full w-10 bg-black draggable"></div>
+    </div>
+    <script>
+        const bar = document.getElementById("bar");
+        const container = document.getElementById("container");
+
+        let isDragging = false;
+
+        bar.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            document.body.style.userSelect = "none";
+        });
+
+        document.addEventListener("mousemove", (e) => {
+            if (isDragging) {
+                let newWidth = e.clientX;
+                if (newWidth < 0) newWidth = 0;
+                if (newWidth > window.innerWidth) newWidth = window.innerWidth;
+                bar.style.width = `${newWidth}px`;
+            }
+        });
+
+        document.addEventListener("mouseup", () => {
+            isDragging = false;
+            document.body.style.userSelect = "auto";
+        });
+    </script>
+</body>
+</html>
