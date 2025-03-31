@@ -1,0 +1,12 @@
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                customgray: '#313131',
+              }
+            }
+          }
+        }
+      </script>
