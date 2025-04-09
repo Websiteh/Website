@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                customgray: '#313131',
+                beforehover: '#b3b3b3',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-blue-500 ">
+    <header class="mt-[4vwh] w-screen bg-black h-[4vw] sticky top-0 flex items-center justify-between z-10  " >
+        <div class=" flex justify-center">
+           <svg class=" transition duration-300 transition-all hover:scale-110 hover:-translate-y-0 ease-in-out items-center ml-10 w-8 h-8 fill-beforehover stroke-[1px] hover:fill-white"           viewBox="0 0 16 16" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" id="svg2" version="1.1">               <g id="layer1" transform="rotate(45 1254.793 524.438)">               <path style="fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M15.464 1044.409v-1.997h-9v-9h-2v11z" id="path4179"/>               </g>              </svg>
+           <svg class=" transition duration-300 transition-all hover:scale-110 hover:-translate-y-0 ease-in-out items-center ml-5  w-8 h-8 fill-beforehover stroke-[0.5px] hover:fill-white" viewBox="0 0 16 16" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" id="svg2" version="1.1">               <g id="layer1" transform="rotate(45 1254.793 524.438)">               <path style="fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M11.532 1048.341H9.536v-9h-9v-2h11z" id="path4179"/>       </g>            </svg>
+ 
+        </div>
+        <textarea placeholder="What do you want to play " class=" m-auto text-white items-center resize-none justify-center placeholder:pt-[8px] bg-customgray  p-2 h-[60px] w-[670px] rounded-3xl" ></textarea>
+    </header> 
+    
+    <div class="bg-red-500 w-[330px] min-h-screen rounded-lg ">
+        <header class=" bg-gray-400 z-2 sticky top-[4vh] h-[160px]">
+            <div class="sticky top-[4vw]">
+                <p class="ml-[20px] text-3xl font-bold text-white ">Your Library</p>
+            
+            <div class=" flex flex-row h-15 w-[330px] mt-[5px]"> 
+                <div class="bg-gray-600 hover:bg-gray-500 text-white rounded-3xl px-4 py-2" > <p>Playlists</p></div>
+                <div class="bg-gray-600 hover:bg-gray-500 text-white rounded-3xl px-4 py-2" > <p>Podcasts</p></div>
+                <div class="bg-gray-600 hover:bg-gray-500 text-white rounded-3xl px-4 py-2" > <p>Albums</p></div>
+            </div>
+        </div>
+        </header>
+     <div class="h-[calc(100vh-60px)] overflow-y-scroll">
+        <div class="flex h-[100px] w-auto bg-red-200 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-red-300 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-red-400 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-red-500 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-red-600 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-red-700 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-blue-700 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-blue-600 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-blue-500 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-blue-400 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-blue-300 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-blue-200 z-1"></div>
+        <div class="flex h-[100px] w-auto bg-blue-100 z-1"></div>
+    </div>
+    </div>
+    <div class="flex h-screen w-[450px]">
+        <header class="">Friend activity</header>
+    </div>
+</body>
+</html>

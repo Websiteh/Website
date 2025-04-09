@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="login" id="login-form">
+        User name: <input name="username" />
+        <br />
+        Password: <input name="password" type="password" />
+        <br />
+        <button type="submit">Login</button>
+      </form>
+      <script>
+        document.getElementById("login-form").addEventListener("submit", event => {
+          event.preventDefault();
+          const form = event.target;
+          if ((form.username.value === "sigma") && (form.password.value === "123")) {
+            location.href = "roblox.html";
+          } else {
+            alert("Invalid user name and/or password!");
+          }
+        });
+      </script>
+</body>
+<body>
+
+</body>
+</html>
