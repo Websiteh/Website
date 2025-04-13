@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emoji Message Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f5f5f5;
+    }
+    select, button {
+      padding: 0.5rem;
+      margin-top: 1rem;
+    }
+    #output {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #ccc;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .copied {
+      color: green;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Emoji Message Generator</h1>
+  <label for="length">How long do you want your message?</label><br/>
+  <select id="length">
+    <option value="60">60 - Short</option>
+    <option value="90">90 - Medium</option>
+    <option value="120">120 - Long</option>
+  </select><br/>
+
+  <button onclick="generateMessage()">Generate & Copy</button>
+  <span id="copied" class="copied" style="display:none;">Copied!</span>
+
+  <div id="output"></div>
+
+  <script>
+    function probability(chance) {
+      return Math.random() < chance;
+    }
+
+    function generateMessage() {
+      const length = parseInt(document.getElementById('length').value);
+      const Fmessage = [];
+
+      while (Fmessage.length <= length) {
+        if (probability(10 / 100)) {
+          for (let i = 0; i < getRand(1, 3); i++) Fmessage.push(":yum:");
+        }
+        for (let i = 0; i < 10; i++) {
+          if (probability(30 / 1000)) {
+            for (let j = 0; j < getRand(3, 7); j++) Fmessage.push(":bangbang:");
+          }
+        }
+        for (let i = 0; i < 10; i++) {
+          if (probability(5 / 100)) {
+            for (let j = 0; j < getRand(1, 2); j++) Fmessage.push(":speaking_head:");
+          }
+        }
+        for (let i = 0; i < 10; i++) {
+          if (probability(10 / 100)) {
+            for (let j = 0; j < getRand(1, 4); j++) Fmessage.push(":smirk_cat:");
+          }
+        }
+        for (let i = 0; i < 10; i++) {
+          if (probability(10 / 100)) {
+            for (let j = 0; j < getRand(1, 4); j++) Fmessage.push(":stuck_out_tongue_closed_eyes:");
+          }
+        }
+        for (let i = 0; i < 10; i++) {
+          if (probability(10 / 100)) {
+            for (let j = 0; j < getRand(1, 4); j++) Fmessage.push(":stuck_out_tongue:");
+          }
+        }
+        for (let i = 0; i < 10; i++) {
+          if (probability(15 / 100)) {
+            for (let j = 0; j < getRand(1, 2); j++) Fmessage.push(":heart_eyes_cat:");
+          }
+        }
+        for (let i = 0; i < 10; i++) {
+          if (probability(13 / 100)) {
+            for (let j = 0; j < getRand(1, 2); j++) Fmessage.push(":face_with_hand_over_mouth:");
+          }
+        }
+        for (let i = 0; i < 10; i++) {
+          if (probability(8 / 100)) {
+            for (let j = 0; j < 1; j++) Fmessage.push(":cat2::heart::black_cat:");
+          }
+        }
+      }
+
+      const message = Fmessage.join("");
+      document.getElementById("output").textContent = message;
+      copyToClipboard(message);
+      document.getElementById("copied").style.display = "inline";
+      setTimeout(() => {
+        document.getElementById("copied").style.display = "none";
+      }, 1500);
+    }
+
+    function getRand(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).catch(err => {
+        alert("Copy failed: " + err);
+      });
+    }
+  </script>
+</body>
+</html>
