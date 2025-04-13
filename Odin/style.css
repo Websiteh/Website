@@ -1,3 +1,27 @@
 body {
     background-color: lightblue;
 }
+
+.mario {
+    color: red;
+}
+
+.luigi {
+    color: brown;
+}
+
+.mario.luigi {
+    color: blue;
+}
+
+.poep .mario {
+    color: darkgoldenrod;
+}
+
+.poep .luigi {
+    color: darkorange;
+}
+
+.poep {
+    color: pink;
+}
