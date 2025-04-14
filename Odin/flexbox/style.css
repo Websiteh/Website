@@ -1,0 +1,33 @@
+body {
+    justify-content: center;
+}
+
+div {
+    background-color: turquoise;
+    border: 1px solid purple;
+}
+
+.flexbox {
+    display: flex;
+    padding: 4px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.space {
+    justify-content: space-around;
+}
+
+.red {
+    background-color: lightcoral;
+    width: 100px;
+    height: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.blue {
+    background-color: lightblue;
+    height: 5px;
+}
