@@ -6,19 +6,16 @@
     height: 50px;
     width: 100vw;
     justify-content: space-between;
+    padding: 7px;
+    overflow: hidden;
 
     
   }
 
-  .left-links {
+  ul {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-  }
+    gap: 7px;
 
-  .right-links {
-    display: flex;
-    justify-content: flex-end;
   }
   .logo {
     font-size: 48px;
