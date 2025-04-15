@@ -1,4 +1,19 @@
+* {
+    border: 2px solid black;
+}
+
 .container {
     background-color: blue;
     display: flex;
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item {
+    background-color: red;
+    height: 150px;
+    width: 150px;
 }
