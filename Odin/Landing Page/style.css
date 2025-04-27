@@ -1,9 +1,12 @@
 
+
+
 * {
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
+    /* outline: 3px solid red; */
 
 }
 
@@ -14,7 +17,7 @@ a, li {
 .header {
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 40px;
     justify-content: space-around;
     background-color: #1f2937;
     width: 100vw;
@@ -41,3 +44,159 @@ ul {
     gap: 75px;
 }
 
+.intro  {
+    height: 430px;
+    background-color: #2f2937;
+    width:100vw
+}
+
+.intro-container {
+    display: flex;
+    /* outline: 1px solid red; */
+    margin-top: 30px;
+    width: 50vw;
+    margin-left: 30vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text-container {
+    /* outline: 2px solid pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    width: 25vw;
+    margin: auto;
+    margin-top: 70px;
+    flex-direction: column;
+    
+}
+
+.intro-big-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.egg {
+    height: 270px;
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 450px;
+    border-radius: 20px;
+    outline: 11px solid #1f2937;
+}
+
+
+/* INFORMATION */
+
+.information p {
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.information {
+    /* outline: 10px solid red; */
+    height: 450px;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-container {
+    display: flex;
+    /* outline: 6px solid lightblue; */
+    height: 400px;
+    margin-top: 25px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center
+
+}
+
+.information-header-container {
+    /* outline: 5px solid blue; */
+    height: 40px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.information-squares-container {
+    /* outline: 3px solid lime; */
+    display: flex;
+    height: 250px;
+    margin-top: 80px;
+    gap: 50px;
+
+ 
+}
+
+.information-square {
+    outline: 5px solid #3882f6;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.information-square-text p{
+    font-size: 16px;
+    width: 150px;  
+    margin-top: 10px;
+
+}
+
+.information-square-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* QUOTE */
+
+.quote {
+    background-color: lightgray;
+    height: 450px;
+    padding: 1px;
+}
+
+.quote-container {
+    /* outline: 5px solid lime; */
+    display: flex;
+    height: 300px;
+    width: 75vw;
+    margin-left: 12.5vw;
+    margin-top:75px;
+    flex-direction: column;
+}
+
+.quote-quote-container {
+    /* outline: 9px solid blue; */
+    display: flex;
+    height: 250px;
+    width: 75vw;
+}
+
+.quote-maker-container {
+    /* outline: 8px solid red; */
+    height: 100px;
+    width: 30vw;
+    justify-content: flex-end;
+    margin-left: 50vw;
+}
+
+.quote-itself {
+    font-size: 45px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: black;
+}
+
+.quote-maker-itself {
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: black;
+}
