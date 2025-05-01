@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open 3 Roblox Revenue Pages</title>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            const screenWidth = window.screen.availWidth;
+            const screenHeight = window.screen.availHeight;
+
+            const windowWidth = Math.floor(screenWidth / 3);
+            const windowHeight = screenHeight;
+
+            const urls = [
+                "https://www.roblox.com/communities/configure?id=13303747#!/revenue/sales",
+                "https://www.roblox.com/communities/configure?id=35930799#!/revenue/sales",
+                "https://www.roblox.com/communities/configure?id=35914286#!/revenue/sales"
+            ];
+
+            for (let i = 0; i < urls.length; i++) {
+                window.open(
+                    urls[i],
+                    "_blank",
+                    `width=${windowWidth},height=${windowHeight},top=0,left=${i * windowWidth}`
+                );
+            }
+        };
+    </script>
+</body>
+</html>
